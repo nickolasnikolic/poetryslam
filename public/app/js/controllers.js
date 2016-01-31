@@ -4,7 +4,7 @@ wdApp.controller('HomeController', ['$scope', '$state', function($scope, $state)
 
   $.getJSON('../api/home')
     .success(function(data) {
-
+      console.log(data);
       $scope.hData = data;
       console.log($scope.hData);
 

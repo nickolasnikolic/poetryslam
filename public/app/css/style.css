@@ -1,3 +1,34 @@
+/*import fonts*/
+@import "fonts/carrig_text/stylesheet.css";
+@import "fonts/carrig_textitalic/stylesheet.css";
+@import "fonts/carrig_bold/stylesheet.css";
+@import "fonts/carrig_display/stylesheet.css";
+@import "fonts/carrig_displayitalic/stylesheet.css";
+
+body{
+    font-family: 'carrigtext';
+}
+
+h1,h2,h3,h4,h6{
+    font-family: 'carrigdisplay';
+}
+
+p{
+    max-width: 30em;
+}
+
+em, footer small{
+    font-family: 'carrigtext_italic';
+}
+
+strong{
+    font-family: 'carrig_textbold';
+}
+
+input, text, button{
+    font-family: 'carrigtext';
+}
+
 
 h1{
     padding: 0.25em;

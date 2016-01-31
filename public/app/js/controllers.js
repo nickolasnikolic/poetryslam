@@ -4,13 +4,13 @@ wdApp.controller('HomeController', ['$scope', '$state', function($scope, $state)
 
   $.getJSON('../api/home')
     .success(function(data) {
-      console.log(data);
+
       $scope.hData = data;
       console.log($scope.hData);
 
       $scope.$apply();
 
-    }).error(function(error){console.log(error);});
+    });
 
   $('#saveButton').click(function() {
 

@@ -9,7 +9,7 @@ article{
     padding: 1em;
 }
 
-input{
+input,button,textarea{
     margin-top: 1em;
 }
 

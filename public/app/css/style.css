@@ -3,9 +3,14 @@ form{
     margin: 1em;
     padding: 1em;
 }
+
 article{
     margin: 1em 0.5em 0.5em 1em;
     padding: 1em;
+}
+
+input{
+    margin-top: 1em;
 }
 
 

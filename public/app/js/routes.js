@@ -9,8 +9,6 @@ var wdApp = angular.module('wdApp', ['ui.router', 'ngSanitize', 'angular.filter'
         controller: 'HomeController',
         onEnter: function($state) {
           console.log('home');
-          //if the credentials are not set
-          //route back to
         }
       })
 

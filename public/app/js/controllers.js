@@ -10,7 +10,7 @@ wdApp.controller('HomeController', ['$scope', '$state', function($scope, $state)
 
       $scope.$apply();
 
-    });
+    }).error(function(error){console.log(error);});
 
   $('#saveButton').click(function() {
 

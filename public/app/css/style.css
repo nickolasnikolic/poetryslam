@@ -9,6 +9,26 @@ article{
 }
 
 
-@media screen and (min-width: 1024px){}
+@media screen and (min-width: 1024px){
+    h1{
+        font-size: 3em;
+    }
+    h2{
+        font-size: 1.8em;
+    }
+    h3,h4,h5,h6{
+        font-size: 1.2em;
+    }
+}
 
-@media screen and (max-width: 1023px){}
+@media screen and (max-width: 1023px){
+    h1{
+        font-size: 2em;
+    }
+    h2{
+        font-size: 1.2em;
+    }
+    h3,h4,h5,h6{
+        font-size: 1.0em;
+    }
+}

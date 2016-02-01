@@ -13,7 +13,9 @@ h1,h2,h3,h4,h6{
     font-family: 'carrigdisplay';
 }
 
-p{}
+pre{
+    margin: 2em;
+}
 
 em, footer small{
     font-family: 'carrigtext_italic';

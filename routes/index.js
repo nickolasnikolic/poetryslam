@@ -34,7 +34,7 @@ router.post('/home', function(req,res,next){
     res.status(200).send('done');
 });
 
-router.post('/home/:id', function(req,res,next){
+router.post('/home/upvote/:id', function(req,res,next){
     var poemId = req.params.id;
     Poem.update({_id: poemId}, {$inc: {upvotes:1}});
 });

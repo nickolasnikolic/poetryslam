@@ -28,11 +28,17 @@ wdApp.controller('HomeController', ['$scope', '$state', function($scope, $state)
     $.post( '../api/home', {
       'title': title,
       'text': text,
-      'name': name
+      'name': name,
+      'upvotes': 0
     } );
 
     $('#hallucinationTitle').val('');
     $('#hallucinationText').val('');
     $('#hallucinationName').val('');
   });
+
+  $scope.upVote = function(id){
+    $.post('../api/home/upvote/' + id);
+  };
+
 }])

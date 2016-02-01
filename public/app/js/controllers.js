@@ -38,7 +38,19 @@ wdApp.controller('HomeController', ['$scope', '$state', function($scope, $state)
   });
 
   $scope.upVote = function(id){
-    $.post('../api/home/upvote/' + id);
+    $.post('../api/home/upvote/' + id)
+        .success(function(data){
+
+          $.getJSON('../api/home')//todo review
+              .success(function(data) {
+
+                $scope.hData = data;
+                console.log($scope.hData);
+
+                $scope.$apply();
+
+              });
+        });
   };
 
 }])

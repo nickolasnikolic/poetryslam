@@ -26,7 +26,8 @@ router.post('/home', function(req,res,next){
     var poem = new Poem({
         title: req.body.title,
         text: req.body.text,
-        name: req.body.name
+        name: req.body.name,
+        upvotes: req.body.upvotes
     });
 
     poem.save();

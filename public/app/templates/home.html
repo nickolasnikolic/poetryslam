@@ -11,7 +11,7 @@
   </div>
   <div>
     <ul id="hList">
-      <li ng-repeat="h in hData | orderBy: '-h.upvotes'">
+      <li ng-repeat="h in hData | orderBy: '-upvotes'">
         <article>
           <h3>{{h.title}} <button ng-click="upVote(h._id)">upvote +{{h.upvotes}}</button></h3>
           <p class="author" ng-show="h.name">by: {{h.name}}</p>

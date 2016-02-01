@@ -1,18 +1,42 @@
 var express = require('express');
 var router = express.Router();
 
+var mongoose = require('mongoose');
+
+mongoose.connect( process.env.MONGOLAB_URI || 'mongodb://localhost/test' );
+
+var poemSchema = mongoose.Schema({
+    title: String,
+    text: String,
+    name: String,
+    upvotes: Number
+});
+
+var Poem = mongoose.model('Poem', poemSchema);
+
 router.get('/home', function(req,res,next){
-    res.status(200).send(JSON.stringify(
-        [
-            {title:"test", text: "this is some text", name: "jimmy john"},
-            {title:"test", text: "this is some text", name: "jimmy john"},
-            {title:"test", text: "this is some text", name: "jimmy john"}
-        ]
-    ));
+
+    Poem.find(function(err, poems){
+        res.status(200).send(poems);
+    });
 });
 
 router.post('/home', function(req,res,next){
-  res.status(200).send(req.body);
+
+    var poem = new Poem({
+        title: req.body.title,
+        text: req.body.text,
+        name: req.body.name
+    });
+
+    poem.save();
+
+    res.status(200).send('done');
+});
+
+router.post('/home/:id', function(req,res,next){
+    var poemId = req.params.id;
+    Poem.update({_id: poemId}, {$inc: {upvotes:1}});
 });
 
 module.exports = router;

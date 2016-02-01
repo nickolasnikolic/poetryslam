@@ -14,7 +14,7 @@
       <li ng-repeat="h in hData track by $index">
         <article>
           <h3>{{h.title}} <button class="upvoteButton" ng-click="upVote(h.id)">upvote +{{h.upvotes}}</button></h3>
-          <p ng-show="h.name">by: {{h.name}}</p>
+          <p class="author" ng-show="h.name">by: {{h.name}} {{h.id}}</p>
           <p>{{h.text}}</p>
         </article>
       </li>

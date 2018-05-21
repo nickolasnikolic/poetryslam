@@ -1,2 +1,4 @@
 # slam
-Social network for poets - currently in production, but glad if you might want to chip in.
+Social network for poets - currently at https://poetryslam.herokuapp.com
+
+A gift to the poetry community, thank you for your work, max.

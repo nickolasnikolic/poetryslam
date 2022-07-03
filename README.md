@@ -1,4 +1,4 @@
 # slam
-Social network for poets - currently at https://poetryslam.herokuapp.com
+Social network for poets
 
 A gift to the poetry community, thank you for your work, max.
